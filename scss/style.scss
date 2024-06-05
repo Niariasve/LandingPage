@@ -7,6 +7,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+$primary-100:#FF6600;
+$primary-200:#ff983f;
+$primary-300:#ffffa1;
+$accent-100:#F5F5F5;
+$accent-200:#929292;
+$text-100:#FFFFFF;
+$text-200:#e0e0e0;
+$bg-100:#1D1F21;
+$bg-200:#2c2e30;
+$bg-300:#444648;
+      
+
 
 // Create SCSS variables
 $white: #ffffff;
@@ -17,6 +29,7 @@ $dark: #2f2f2f;
 $light: #dce5e4;
 $lighter: #eff2f1;
 $body_color: #6a6a6a;
+
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
