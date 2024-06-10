@@ -709,3 +709,29 @@ textarea {
     height: 50px;
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
+
+
+/* Custom classes */
+
+.errores {
+  width: 100%;
+  display: block;
+}
+
+.error {
+  background-color: rgb(187, 58, 58);
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error p {
+  margin: 0 auto;
+  color: white;
+  font-size: 15px;
+}

@@ -443,7 +443,9 @@
 					</div>
 				</div>
 
-				<form id="formulario" class="container-sm">
+				<div class="errores"></div>
+
+				<form id="formulario" class="container-sm container">
 					<div class="row mb-3">
 						<div class="campo col-md-6">
 							<label for="name">Nombre</label>
@@ -484,7 +486,7 @@
 						<div class="col-md-6 mb-3">
 							<label for="contraseña-confirmar">Confirmar Contraseña</label>
 							<input 
-							type="password-confirmar"
+							type="password"
 							class="form-control"
 							id="contraseña-confirmar"
 							placeholder="Confirma tu Contraseña">
@@ -495,7 +497,7 @@
 						<div class="row">
 							<label for="genero">Seleccione su género</label>
 							<select id="genero" class="form-select">
-								<option selected disabled>--Seleccione una opción--</option>
+								<option selected disabled value="0">--Seleccione una opción--</option>
 								<option value="1">Masculino</option>
 								<option value="2">Femenino</option>
 							</select>
