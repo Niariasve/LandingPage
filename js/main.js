@@ -84,6 +84,7 @@ function guardarObjeto(name, apellido, email, contraseña, confirmar_contraseña
                 <p>Exito</p>
             </div>
         `;
+        loadTable()
     })
     .catch(error => {
         console.error(error);
@@ -125,7 +126,39 @@ async function loadTable() {
     }
 
     let datos = await respuesta.json()
-    console.log(datos)
+
+    let setGender = new Set()
+    let mapa = new Map()
+
+    for (const key in datos) {
+        if (Object.hasOwnProperty.call(datos, key)) {
+            const element = datos[key];
+            setGender.add(element.genero)
+
+            let cantidad = mapa.get(element.genero)
+            
+            if (cantidad == null) {
+                mapa.set(element.genero, 1) 
+            } else {
+                mapa.set(element.genero, cantidad + 1)
+            }
+        }
+    }
+
+    let table = document.getElementById('table-body')
+
+    table.innerHTML = ""
+    
+    setGender.forEach(genero => {
+        let cantidad = mapa.get(genero)
+        let template = `
+            <tr>
+                <th scope="row">${genero}</th>
+                <td>${cantidad}</td>	
+            </tr>
+        `
+        table.innerHTML += template
+    })
 }
 
 window.addEventListener("DOMContentLoaded", loaded)
