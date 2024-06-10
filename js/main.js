@@ -1,4 +1,6 @@
 let loaded = (e) => {
+    loadTable();
+
     let myform = document.getElementById('formulario')
     myform.addEventListener('submit', (eventSubmit) => {
         eventSubmit.preventDefault()
@@ -76,16 +78,16 @@ function guardarObjeto(name, apellido, email, contraseña, confirmar_contraseña
     })
     .then(datos => {
         console.log(datos);
-        let alertas = document.querySelector('.errores');
+        let alertas = document.querySelector('.alertas');
         alertas.innerHTML = `
-            <div class="error">
+            <div class="exito">
                 <p>Exito</p>
             </div>
         `;
     })
     .catch(error => {
         console.error(error);
-        let alertas = document.querySelector('.errores');
+        let alertas = document.querySelector('.alertas');
         alertas.innerHTML = `
             <div class="error">
                 <p>Error: ${error.message}</p>
@@ -96,7 +98,7 @@ function guardarObjeto(name, apellido, email, contraseña, confirmar_contraseña
 
 
 function mostrarErrores(errores) {
-    let documentErrores = document.querySelector('.errores')
+    let documentErrores = document.querySelector('.alertas')
 
     documentErrores.innerHTML = ""
 
@@ -111,5 +113,19 @@ function mostrarErrores(errores) {
     });
 }
 
+async function loadTable() {
+    console.log('Desde load tbale')
+    let url = 'https://landing-page-36bed-default-rtdb.firebaseio.com/collection.json'
+
+    let respuesta = await fetch(url)
+
+    if(!respuesta.ok) {
+        console.error('Error: ', respuesta.status)
+        return
+    }
+
+    let datos = await respuesta.json()
+    console.log(datos)
+}
 
 window.addEventListener("DOMContentLoaded", loaded)

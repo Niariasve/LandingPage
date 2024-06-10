@@ -713,7 +713,7 @@ textarea {
 
 /* Custom classes */
 
-.errores {
+.alertas {
   width: 100%;
   display: block;
 }
@@ -730,7 +730,19 @@ textarea {
   align-items: center;
 }
 
-.error p {
+.exito {
+  background-color: rgb(44, 226, 83);
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alertas p {
   margin: 0 auto;
   color: white;
   font-size: 15px;
