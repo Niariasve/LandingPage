@@ -1,0 +1,14 @@
+{
+  "name": "landingpage",
+  "version": "1.0.0",
+  "description": "Landing page project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "author": "Nestor Arias",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.5"
+  }
+}
