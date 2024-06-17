@@ -644,12 +644,12 @@ a {
 			height: 58px;
 			line-height: 58px;
 			border-radius: 50%;
-			background: rgba($primary, .1);
+			background: rgba($light, 1);
 			color: $dark;
 			transition: .3s all ease;
 
 			&:hover {
-				background: $primary;
+				background: $primary-300;
 				color: $white;
 			}
 		}

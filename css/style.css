@@ -524,12 +524,12 @@ a.more {
   height: 58px;
   line-height: 58px;
   border-radius: 50%;
-  background: rgba(23, 122, 79, 0.1);
+  background: #e0e0e0;
   color: #334646;
   transition: 0.3s all ease;
 }
 .testimonial-slider-wrap #testimonial-nav > span:hover {
-  background: #177a4f;
+  background: #009855;
   color: #ffffff;
 }
 .testimonial-slider-wrap #testimonial-nav .prev {
